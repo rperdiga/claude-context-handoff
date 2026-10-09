@@ -1,0 +1,34 @@
+{
+  "name": "context-handoff",
+  "version": "0.2.0",
+  "description": "Pauses at a context threshold, writes a handoff file, puts a continue prompt on the clipboard, and can start a fresh session from it.",
+  "author": {
+    "name": "rperdiga"
+  },
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "threshold": {
+      "type": "number",
+      "title": "Threshold (%)",
+      "description": "Context window fill (percent) that triggers the handoff.",
+      "default": 70
+    },
+    "mode": {
+      "type": "string",
+      "title": "After the handoff",
+      "description": "ask: show buttons; auto: /clear and continue at once; clipboard: only copy the prompt.",
+      "options": [
+        "ask",
+        "auto",
+        "clipboard"
+      ],
+      "default": "ask"
+    },
+    "folder": {
+      "type": "string",
+      "title": "Handoff folder",
+      "description": "Where handoff files are written, relative to the session's project root.",
+      "default": ".claude/handoffs"
+    }
+  }
+}

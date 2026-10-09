@@ -1,0 +1,5 @@
+{
+  "name": "rperdiga-mods",
+  "owner": { "name": "rperdiga" },
+  "plugins": [{ "name": "context-handoff", "source": "./" }]
+}
